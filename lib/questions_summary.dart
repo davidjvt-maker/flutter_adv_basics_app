@@ -14,20 +14,21 @@ class QuestionsSummary extends StatelessWidget {
           children: summaryData.map((data) {
             return Row(
               children: [
-                Text(((data['question_index'] as int )+ 1).toString()),
+                Text(((data['question_index'] as int) + 1).toString()),
                 Expanded(
                   child: Column(
-                  children: [
-                    Text(data['question'].toString()),
-                    const SizedBox(height: 5),
-                    Text(data['chosen_answer'].toString()),
-                    Text(data['correct_answer'].toString()),
-                  ],
+                    children: [
+                      Text(data['question'].toString()),
+                      const SizedBox(height: 5),
+                      Text(data['chosen_answer'].toString()),
+                      Text(data['correct_answer'].toString()),
+                    ],
+                  ),
                 ),
-              ),
-            ],
-          );
-        }).toList(),
+              ],
+            );
+          }).toList(),
+        ),
       ),
     );
   }
